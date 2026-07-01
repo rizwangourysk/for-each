@@ -1,0 +1,13 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# SSH keys
+terra-key-ec2
+terra-key-ec2.pub
+*.pem
+
+# Logs
+*.log
