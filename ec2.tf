@@ -60,6 +60,9 @@ resource "aws_instance" "my_instance" {
     "tws-junoon-automate-micro" = "t3.micro"
     "tws-junoon-automate-small" = "t3.small"
   })
+  # metaa argument
+  depends_on = [aws_security_group.my_security_group, aws_key_pair.my_key]
+  
   key_name        = aws_key_pair.my_key.key_name
   security_groups = [aws_security_group.my_security_group.name]
   instance_type   = each.value
